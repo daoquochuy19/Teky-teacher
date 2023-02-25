@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, shrink-to-fit=no">
+        <meta http-equiv="content-language" content="vi">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="author" content="Template">
+        <meta name="COPYRIGHT" content="© Template">
+        <meta name="robots" content="noodp,index,follow">
+        <meta name="google" content="notranslate">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <link rel="shortcut icon" href="images/favicon.ico">
+        <title>Teky LMS - Register</title>
+        <!--Include CSS-->
+        <link href="{% static 'css/style3.css' %}" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    </head>
+    <body>
+        
+        <div id="DIV_1">
+            <!--Content page part-->
+            
+            
+            
+            <div id="DIV_2">
+                <div id="DIV_3">
+                    <div id="DIV_4">
+                        <div id="DIV_5">
+                            <div id="DIV_6">
+                                <div id="DIV_7">
+                                    <img src="http://static-html.teky.edu.vn/tekylms20html/static/images/teky/logo-login.png" id="IMG_8" alt='' />
+                                </div>
+                                
+                                <form method="POST" action="{% url 'teacher:register' %}">                            
+                                    {% if messages %}
+                                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                        {% for message in messages %}
+                                        
+                                            <div class="error">
+                                                {{message}}
+                                                
+                                            </div>   
+                                        
+                                        {% endfor %}
+                                        </div>
+                                    {% endif %}
+                                    <div id="DIV_9">  
+                                        
+                                        {% csrf_token%}
+                                        <div id="DIV_10">                                       
+                                            <input required type="text" id="INPUT_11"  placeholder="Username" {{form.username}}
+                                        </div>
+                                        <div id="DIV_10">
+                                            <input required type="email" id="INPUT_11"  placeholder="Email" {{form.email}}
+                                        </div>
+                                        <div id="DIV_10">
+                                            <input required type="password" id="INPUT_11"  placeholder="Password" {{form.password1}}
+                                        </div>
+                                        <div id="DIV_10">
+                                            <input required type="password" id="INPUT_11"  placeholder="Confirm Password" {{form.password2}}
+                                        </div>
+                                         
+                                        <button id="BUTTON_21" tyle="submit">
+                                            <span id="SPAN_22" >Đăng ký<div id="DIV_23">
+                                                miễn phí
+                                            </div></span>
+                                            <i id="I_24"></i>
+                                        </button>
+                                        
+                                        
+                                    </form>   
+    
+                                </div>
+                                <div id="DIV_33">
+                                    <span id="SPAN_34">Bạn đã có tài khoản?</span> <a href="login" id="A_35">Đăng nhập</a> <span id="SPAN_36">ngay</span>
+                                </div>
+                                <div id="DIV_37">
+                                    <div id="DIV_38">
+                                        <span id="SPAN_39">Made with</span><i id="I_40"></i><span id="SPAN_41">by TEKY</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="DIV_42">
+                            <img src="http://static-html.teky.edu.vn/tekylms20html/static/images/teky/register.png" id="IMG_43" alt='' /><span id="SPAN_44">Xin chào!<b id="B_45">Đăng ký tài khoản!</b></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="" async defer></script>
+        
+    </body>
+</html>

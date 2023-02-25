@@ -1,0 +1,119 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, shrink-to-fit=no">
+        <meta http-equiv="content-language" content="vi">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="author" content="Template">
+        <meta name="COPYRIGHT" content="© Template">
+        <meta name="robots" content="noodp,index,follow">
+        <meta name="google" content="notranslate">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <link rel="shortcut icon" href="images/favicon.ico">
+        <title>Teky LMS - Login</title>
+        <!--Include CSS-->
+        <link href="{% static 'css/style2.css' %}" rel="stylesheet">
+
+    </head>
+    <body>
+        <div id="DIV_2">
+            <!--Content page part-->
+        
+            <div id="DIV_3">
+                <div id="DIV_4">
+                    <div id="DIV_5">
+                        <div id="DIV_6">
+                            <div id="DIV_7">
+                                <div id="DIV_8">
+                                    <img src="http://static-html.teky.edu.vn/tekylms20html/static/images/teky/logo-login.png" id="IMG_9" alt='' />
+                                </div>
+                                <div id="DIV_10">
+                                    <form method="POST" action="{% url 'teacher:login' %}">
+                                        {% csrf_token%}
+                                        
+                                    <div id="DIV_11">
+                                        <input id="INPUT_12" {{form.username}} 
+                                        
+                                        
+                                        <div id="DIV_13" placeholder="Số điện thoại; Email hoặc Tên đăng nhập">
+                                            
+                                        </div>
+                                    </div>
+                                    <div id="DIV_17">
+                                        <input id="INPUT_18" type="password" {{form.password}}                                    
+                                        <div id="DIV_19" placeholder="Mật khẩu">
+                                        </div> 
+                                        <button id="BUTTON_21">
+                                            <i id="I_22"></i>
+                                        </button>
+                                        {% if messages %}
+                                            {% for message in messages %}
+                                            <div class="message">
+                                             {{message}}
+                                            </div>
+                                            {% endfor %}
+                                        {% endif %}
+                                    </div> 
+                                        <button id="BUTTON_24">
+                                            <span id="SPAN_25" type="submit">Đăng nhập</span>
+                                            <div id="DIV_26">
+                                                bằng mật khẩu
+                                            </div><i id="I_27"></i>
+                                        </button>
+                                    </form>
+                                    
+                                    <div id="DIV_28">
+                                        <span id="SPAN_29">Bạn không nhớ</span> <a href="#" id="A_30"> <b id="B_31">mật khẩu?</b></a>
+                                    </div>
+                                    <div id="DIV_32">
+                                        <span id="SPAN_33">Hoặc</span>
+                                    </div> 
+                                    <button id="BUTTON_34">
+                                        <i id="I_35"></i><span id="SPAN_36">Đăng nhập bằng Facebook</span>
+                                    </button> 
+                                    <button id="BUTTON_37">
+                                        <i id="I_38"></i><span id="SPAN_39">Đăng nhập bằng Gmail</span>
+                                    </button>
+                                </div>
+                                <div id="DIV_40">
+                                    <div id="DIV_41">
+                                        Bạn chưa có tài khoản? <a href="register" id="A_42"><span id="SPAN_43">Đăng ký ngay</span></a>
+                                    </div>
+                                    <div id="DIV_44">
+                                        <span id="SPAN_45">Made with</span><i id="I_46"></i><span id="SPAN_47">by TEKY</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="DIV_48">
+                            <img src="http://static-html.teky.edu.vn/tekylms20html/static/images/teky/login.png" id="IMG_49" alt='' /> <span id="SPAN_50"> <b id="B_51">Welcome!</b></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Optional JavaScript part-->
+        
+        <!--jQuery first, then Popper.js, then Bootstrap JS-->
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <!--Page specific javascripts part-->
+    </body>
+</html>
